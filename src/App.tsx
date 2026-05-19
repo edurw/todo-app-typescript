@@ -35,13 +35,15 @@ function App() {
     <div className={styles.app}>
       <div className={styles.container}>
         <Header title="Lista de Tarefas com TypeScript" />
-        <TodoForm onAddTodo={addTodo} />
-        <TodoList
-          todos={todos}
-          onToggle={toggleTodo}
-          onDelete={deleteTodo}
-        />
-        <Stats todos={todos} />
+        <div className={styles.containerBody}>
+          <TodoForm onAddTodo={addTodo} />
+          <TodoList
+            todos={todos}
+            onToggle={toggleTodo}
+            onDelete={deleteTodo}
+          />
+          <Stats todos={todos} />
+        </div>
       </div>
     </div>
   );
